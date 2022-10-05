@@ -43,6 +43,7 @@ export default {
       const number = Math.round((window.innerWidth - 500) / 10);
       this.letterSpacing = `${number}px`;
     });
+    this.setTheme('ecumene')
   },
   data() {
     return {
