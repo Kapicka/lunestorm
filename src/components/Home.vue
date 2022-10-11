@@ -50,11 +50,6 @@ export default {
     });
   },
   mixins: [helpers],
-  methods: {
-    setBackgroundColor(color) {
-      this.bg = color;
-    }
-  }
 };
 </script>
 
@@ -76,7 +71,6 @@ export default {
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
   padding-top: 150px;
 }
 

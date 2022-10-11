@@ -3,7 +3,7 @@ import { theme } from "@/store";
 const helpers = {
   data() {
     return {
-      theme: "ecumene"
+      theme: theme
     };
   },
   methods: {
@@ -12,6 +12,7 @@ const helpers = {
     },
     setTheme(inputTheme) {
       theme.value = inputTheme;
+      document.querySelector('body').className = theme.value
     },
     getPage(){
       return this.$route.path.includes("ecumene") ? "ecumene" : "electro";

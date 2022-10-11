@@ -1,30 +1,21 @@
 <template>
-  <div id="app"
-       class="app"
-       v-bind:class="{
-    'electro-theme':isTheme('electro'),
-    'ecumene-theme':isTheme('ecumene'),
-  }">
-    <div class="bb">
-      <h1 class="h1"
-          v-bind:class="{ 'color--black':isTheme('ecumene'), 'color--white':isTheme('electro')}"
-          :style="{'letterSpacing':letterSpacing}">LUNE~STORM </h1>
-    </div>
+  <div id="app" class="app">
+    <h1 class="h1"
+        v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
+        :style="{'letterSpacing':letterSpacing}">LUNE~STORM </h1>
     <router-view></router-view>
   </div>
 </template>
-
 <script>
 
 import helpers from "@/mixins/helpers.js";
 import Home from "@/components/Home";
-import { theme } from "@/store";
 
 export default {
   name: "App",
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    Home,
+    Home
   },
   mounted() {
     const number = Math.round((window.innerWidth - 500) / 10);
@@ -37,26 +28,14 @@ export default {
   },
   data() {
     return {
-      letterSpacing: "1px",
-      theme: theme
+      letterSpacing: "1px"
     };
   },
-  mixins: [helpers],
-  watch: {
-    theme() {
-      console.log("changed");
-    }
-  },
-  methods: {
-    setBackgroundColor(color) {
-      this.bg = color;
-    }
-  }
+  mixins: [helpers]
 };
 </script>
 
 <style>
-
 .app {
   transition: 500ms;
 }
@@ -74,12 +53,7 @@ export default {
 body {
   margin: 0;
   pading: 0;
-}
-
-.bb {
-  /*display: flex;*/
-  /*justify-content: right;*/
-
+  transition: 1s background-color;
 }
 
 .h1 {
@@ -93,45 +67,12 @@ body {
   transition: 1000ms color linear;
 }
 
-.color--black {
+.color--electro {
   color: black;
 }
 
-.underline {
-  text-decoration: underline;
-  text-underline-offset: 10px;
-}
-
-.color--white {
+.color--ecumene {
   color: #ffecc1;
-}
-
-.content {
-  display: grid;
-  grid-template-columns:1fr 1fr;
-  height: 100vh;
-  padding-top: 150px;
-}
-
-.border-left {
-  border-left: 1px solid black
-
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.p20 {
-  padding: 20px;
-}
-
-.h100 {
-  height: 100%;
 }
 
 .electro-theme {
@@ -141,11 +82,6 @@ body {
 .ecumene-theme {
   background-color: #fff2d8;
 
-}
-
-
-.w100 {
-  width: 100%;
 }
 
 

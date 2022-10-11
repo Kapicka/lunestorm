@@ -59,14 +59,12 @@ export default {
 <style scoped>
 .wrapper {
   width: 100%;
-  height: 100vh;
 }
 
 .side-bar {
   top:40%;
   transform: rotate(-90deg);
 }
-
 
 .side-bar--right {
   right: 20px;
