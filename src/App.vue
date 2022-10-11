@@ -59,7 +59,6 @@ export default {
 
 .app {
   transition: 500ms;
-  background-color: white;
 }
 
 #app {
