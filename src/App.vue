@@ -9,16 +9,6 @@
       <h1 class="h1"
           v-bind:class="{ 'color--black':isTheme('ecumene'), 'color--white':isTheme('electro')}"
           :style="{'letterSpacing':letterSpacing}">LUNE~STORM </h1>
-      <nav class="nav">
-        <ul class="ul flex"
-            v-bind:class="{ 'color--black':isTheme('ecumene'),
-             'color--white':isTheme('electro')}"
-        >
-          <li class="mr10 pointer">EVENTS</li>
-          <li class="mr10 pointer">ARTISTS</li>
-          <li class="mr10 pointer">PLACES</li>
-        </ul>
-      </nav>
     </div>
     <router-view></router-view>
   </div>
@@ -34,7 +24,7 @@ export default {
   name: "App",
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    Home
+    Home,
   },
   mounted() {
     const number = Math.round((window.innerWidth - 500) / 10);
@@ -43,7 +33,7 @@ export default {
       const number = Math.round((window.innerWidth - 500) / 10);
       this.letterSpacing = `${number}px`;
     });
-    this.setTheme('ecumene')
+    this.setTheme("ecumene");
   },
   data() {
     return {
@@ -154,35 +144,6 @@ body {
 
 }
 
-.menu-text {
-  transition: 1s;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-.ul {
-  text-decoration: none;
-  list-style: none;
-}
-
-.flex {
-  display: flex;
-}
-
-
-.mr10 {
-  margin-right: 10px;
-}
-
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  padding-top: 0;
-}
 
 .w100 {
   width: 100%;

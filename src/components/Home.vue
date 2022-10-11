@@ -2,10 +2,9 @@
   <div class="content">
     <div class="">
       <div>
-        <router-link class="decoration-none" to="/ecumene">
+        <router-link class="decoration-none" to="/electro">
           <div
             @mouseenter="setTheme('electro')"
-            @click="$emit('click-electro')"
             v-bind:class="{
             'color--black ': isTheme('ecumene'),
             'color--white underline': isTheme('electro'),
@@ -22,13 +21,12 @@
         <router-link class="decoration-none" to="/ecumene">
           <div
             @mouseenter="setTheme('ecumene')"
-            @click="$emit('click-electro')"
             v-bind:class="{
-            'color--black underline': isTheme('ecumene'),
-            'color--white ': isTheme('electro'),
+            'color--black underline border-left--black': isTheme('ecumene'),
+            'color--white border-left--white': isTheme('electro'),
             pointer: true,
           }"
-            class="h60 p20 border-left align-left menu-text"
+            class="h60 p20  align-left menu-text"
           >
             ECUMENE
           </div>
@@ -82,8 +80,12 @@ export default {
   padding-top: 150px;
 }
 
-.border-left {
+.border-left--black {
   border-left: 1px solid black;
+}
+
+.border-left--white {
+  border-left: 1px solid #ffecc1;
 }
 
 .align-left {

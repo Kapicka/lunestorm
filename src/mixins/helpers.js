@@ -12,6 +12,9 @@ const helpers = {
     },
     setTheme(inputTheme) {
       theme.value = inputTheme;
+    },
+    getPage(){
+      return this.$route.path.includes("ecumene") ? "ecumene" : "electro";
     }
   }
 };
