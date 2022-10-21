@@ -1,4 +1,4 @@
-import { theme } from "@/store";
+import { theme } from "@/store.js";
 
 const helpers = {
   data() {
@@ -16,6 +16,10 @@ const helpers = {
     },
     getPage(){
       return this.$route.path.includes("ecumene") ? "ecumene" : "electro";
+    },
+    getUrl(endpoint){
+      return `/${this.getPage()}/${endpoint}`
+
     }
   }
 };

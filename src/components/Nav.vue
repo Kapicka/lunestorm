@@ -1,14 +1,23 @@
 <template>
-    <nav class="nav">
-      <ul class="ul flex"
-          v-bind:class="{ 'color--black':isTheme('ecumene'),
-             'color--white':isTheme('electro')}"
-      >
-        <li class="mr10 pointer">EVENTS</li>
-        <li class="mr10 pointer">ARTISTS</li>
-        <li class="mr10 pointer">PLACES</li>
-      </ul>
-    </nav>
+  <nav class="nav"
+       v-bind:class="{fixed}"
+  >
+    <ul class="ul flex"
+    >
+      <router-link class="mr10 pointer link"
+                   v-bind:class="{underline:currentPage==='events'}" :to="getUrl('events')">
+        EVENTS
+      </router-link>
+      <router-link class="mr10 pointer link"
+                   v-bind:class="{underline:currentPage==='artists'}" :to="getUrl('artists')">
+        ARTISTS
+      </router-link>
+      <router-link class="mr10 pointer link"
+                   v-bind:class="{underline:currentPage==='places'}" :to="getUrl('places')">
+        PlACES
+      </router-link>
+    </ul>
+  </nav>
 </template>
 
 <script>
@@ -16,19 +25,25 @@ import helpers from "@/mixins/helpers";
 
 export default {
   name: "Nav",
-  mixins:[helpers]
+  props: {
+    currentPage: {
+      type: String
+    }
+  },
+  data() {
+    return {
+      fixed: false
+    };
+  },
+  mixins: [helpers],
 };
+
 
 </script>
 
 <style scoped>
-.flex {
-  display: flex;
-}
-
-.flex {
-  display: flex;
-}
+@import "../assets/styles/theme.css";
+@import "../assets/styles/common.css";
 
 .ul {
   text-decoration: none;
@@ -42,12 +57,7 @@ export default {
   margin-top: 0;
   padding-top: 0;
 }
-
 .mr10 {
   margin-right: 10px;
-}
-
-.pointer {
-  cursor: pointer;
 }
 </style>

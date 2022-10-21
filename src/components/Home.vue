@@ -1,16 +1,17 @@
 <template>
-  <div class="content">
-    <div class="">
+  <div class="home-content"
+  >
+    <div>
       <div>
         <router-link class="decoration-none" to="/electro">
           <div
             @mouseenter="setTheme('electro')"
             v-bind:class="{
-            'color--black ': isTheme('ecumene'),
-            'color--white underline': isTheme('electro'),
-            pointer: true,
-          }"
-            class="h60 p20 align-right menu-text">
+            'border-right--white underline  color--ecumene': isTheme('electro'),
+            'border-right--black color--electro': isTheme('ecumene')} "
+            @click="setTheme('electro')"
+
+            class="h60 p20 text-align-right menu-text pointer">
             ELECTRO
           </div>
         </router-link>
@@ -22,11 +23,9 @@
           <div
             @mouseenter="setTheme('ecumene')"
             v-bind:class="{
-            'color--black underline border-left--black': isTheme('ecumene'),
-            'color--white border-left--white': isTheme('electro'),
-            pointer: true,
-          }"
-            class="h60 p20  align-left menu-text"
+            'border-right--white color--ecumene': isTheme('electro'),
+            'border-right--black underline  color--electro': isTheme('ecumene')} "
+            class="h60 p20  text-align-left menu-text"
           >
             ECUMENE
           </div>
@@ -38,6 +37,7 @@
 
 <script>
 import helpers from "@/mixins/helpers.js";
+import "../assets/styles/theme.css";
 
 export default {
   name: "Home",
@@ -49,46 +49,20 @@ export default {
       this.letterSpacing = `${number}px`;
     });
   },
-  mixins: [helpers],
+  mixins: [helpers]
 };
 </script>
 
 <style>
+@import "../assets/styles/theme.css";
+@import "../assets/styles/common.css";
 
-.color--black {
-  color: black;
-}
-
-.underline {
-  text-decoration: underline;
-  text-underline-offset: 10px;
-}
-
-.color--white {
-  color: #ffecc1;
-}
-
-.content {
+.home-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 150px;
+  padding-top: 300px;
 }
 
-.border-left--black {
-  border-left: 1px solid black;
-}
-
-.border-left--white {
-  border-left: 1px solid #ffecc1;
-}
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
 
 .p20 {
   padding: 20px;
@@ -100,9 +74,9 @@ export default {
 
 .decoration-none {
   text-decoration: none;
+  text-underline: none;
 }
+@media (max-width: 600px) {
 
-.pointer {
-  cursor: pointer;
 }
 </style>

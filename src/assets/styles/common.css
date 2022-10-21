@@ -1,0 +1,146 @@
+.center-content {
+    display: flex;
+    justify-items: center;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.justify-items-end {
+    justify-items: end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.float-left {
+    float: left;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.w100 {
+    width: 100%
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.mt200 {
+    margin-top: 60px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.white-space-pre {
+    white-space: pre;
+}
+
+.bold {
+    font-weight: bold;
+
+}
+
+.p0 {
+
+    padding: 0;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.link {
+    color: inherit;
+}
+
+.link--star::after {
+   content: "*";
+}
+
+.py5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap
+}
+
+.link--underline {
+    padding-bottom: 2px;
+    border-bottom: 1px solid;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.flex-gap-10 {
+    gap: 20px;
+
+}
+
+.align-items-end {
+    align-items: end;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.gap-5 {
+    gap: 5px;
+}

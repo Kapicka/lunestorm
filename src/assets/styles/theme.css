@@ -1,0 +1,13 @@
+.color--electro {
+    color: black;
+}
+.color--ecumene {
+    color: #ffecc1;
+}
+.border-right--black {
+    border-right: 1px solid black;
+}
+
+.border-right--white {
+    border-right: 1px solid #ffecc1;
+}

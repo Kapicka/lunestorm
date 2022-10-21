@@ -1,8 +1,13 @@
 <template>
-  <div id="app" class="app">
-    <h1 class="h1"
-        v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
-        :style="{'letterSpacing':letterSpacing}">LUNE~STORM </h1>
+  <div id="app"
+       class="app"
+       v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
+  >
+    <div>
+      <h1 class="h1"
+          v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
+          :style="{'letterSpacing':letterSpacing}">LUNE~STORM </h1>
+    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -18,13 +23,14 @@ export default {
     Home
   },
   mounted() {
-    const number = Math.round((window.innerWidth - 500) / 10);
+    const number = Math.round((window.innerWidth - 445) / 9);
     this.letterSpacing = `${number}px`;
     window.addEventListener("resize", () => {
-      const number = Math.round((window.innerWidth - 500) / 10);
+      const number = Math.round((window.innerWidth - 445) / 9);
       this.letterSpacing = `${number}px`;
     });
-    this.setTheme("ecumene");
+
+    this.setTheme(this.getPage());
   },
   data() {
     return {
@@ -36,6 +42,8 @@ export default {
 </script>
 
 <style>
+@import "./assets/styles/theme.css";
+
 .app {
   transition: 500ms;
 }
@@ -47,7 +55,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 1s background-color;
-  color: black;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -58,30 +69,20 @@ body {
 
 .h1 {
   padding: 0;
-  color: #fff2d8;
+  margin: 0px 0px 0px 10px;
   width: auto;
-  font-size: 72px;
+  font-size: 62px;
   text-align: center;
   text-wrap: none;
-  margin: 0 0 0 20px;
   transition: 1000ms color linear;
 }
 
-.color--electro {
-  color: black;
-}
 
-.color--ecumene {
-  color: #ffecc1;
-}
-
-.electro-theme {
-  background-color: black;
-}
-
-.ecumene-theme {
-  background-color: #fff2d8;
-
+@media (max-width: 600px) {
+  .h1 {
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 
