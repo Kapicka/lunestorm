@@ -23,8 +23,8 @@
           <div
             @mouseenter="setTheme('ecumene')"
             v-bind:class="{
-            'border-right--white color--ecumene': isTheme('electro'),
-            'border-right--black underline  color--electro': isTheme('ecumene')} "
+            ' color--ecumene': isTheme('electro'),
+            ' underline  color--electro': isTheme('ecumene')} "
             class="h60 p20  text-align-left menu-text"
           >
             ECUMENE
@@ -59,8 +59,9 @@ export default {
 
 .home-content {
   display: grid;
+  height: calc(100vh - 200px);
   grid-template-columns: 1fr 1fr;
-  padding-top: 300px;
+  align-items: center;
 }
 
 
