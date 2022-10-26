@@ -42,10 +42,10 @@ import "../assets/styles/theme.css";
 export default {
   name: "Home",
   mounted() {
-    const number = Math.round((window.innerWidth - 500) / 10);
+    const number = Math.round((window.innerWidth - 500) / 9);
     this.letterSpacing = `${number}px`;
     window.addEventListener("resize", () => {
-      const number = Math.round((window.innerWidth - 500) / 10);
+      const number = Math.round((window.innerWidth - 500) / 9);
       this.letterSpacing = `${number}px`;
     });
   },

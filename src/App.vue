@@ -4,9 +4,9 @@
        v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
   >
     <div>
-      <h1 class="h1"
+      <h1 class="h1 no-wrap"
           v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
-          :style="{'letterSpacing':letterSpacing}">LUNE~STORM </h1>
+          :style="{'letterSpacing':letterSpacing}">LUNESTORM </h1>
     </div>
     <router-view></router-view>
   </div>
@@ -23,10 +23,10 @@ export default {
     Home
   },
   mounted() {
-    const number = Math.round((window.innerWidth - 445) / 9);
+    const number = Math.round((window.innerWidth - 400) / 8);
     this.letterSpacing = `${number}px`;
     window.addEventListener("resize", () => {
-      const number = Math.round((window.innerWidth - 445) / 9);
+      const number = Math.round((window.innerWidth - 400) / 8);
       this.letterSpacing = `${number}px`;
     });
 
@@ -65,6 +65,10 @@ body {
   margin: 0;
   pading: 0;
   transition: 1s background-color;
+}
+.no-wrap {
+  text-wrap: none;
+  white-space: nowrap;
 }
 
 .h1 {

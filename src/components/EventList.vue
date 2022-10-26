@@ -5,7 +5,7 @@
     </div>
     <div class="center-content w100 mt200">
       <div class="flex justify-content-center flex-direction-column w100">
-        <div class="list-item" v-for="(event) in events" v-bind:key="event.key">
+        <div class="list-item" v-for="(event,i ) in events" v-bind:key="event.key">
           <div class="flex-mobile flex flex-gap-10 align-items-end">
             <div class="text-align-center-mobile">
               <div class="bold">{{ event.date }}</div>
@@ -29,9 +29,9 @@
                 <div class="mt5">
                   <div v-bind:key="artist.key" v-for="artist of event.artists">
                     <router-link class="link link--start ml5" v-if="!!getArtistName(artist)"
-                                 :to="getUrl(`artists#${artist}`)">{{ getArtistName(artist) }}
+                                 :to="getUrl(`artists#${artist}`)">{{ getArtistName(artist) }}*
                     </router-link>
-                    <div v-else>{{ artist }}</div>
+                    <div v-else>{{ artist }}*</div>
                   </div>
                 </div>
               </div>
