@@ -9,12 +9,16 @@
         EVENTS
       </router-link>
       <router-link class="mr10 pointer link"
-                   v-bind:class="{underline:currentPage==='artists'}" :to="getUrl('artists')">
-        ARTISTS
+                   v-bind:class="{underline:currentPage==='people'}" :to="getUrl('people')">
+       PEOPLE
       </router-link>
       <router-link class="mr10 pointer link"
-                   v-bind:class="{underline:currentPage==='places'}" :to="getUrl('places')">
-        PlACES
+                   v-bind:class="{underline:currentPage==='venues'}" :to="getUrl('venues')">
+       VENUES
+      </router-link>
+      <router-link class="mr10 pointer link"
+                   v-bind:class="{underline:currentPage==='contact'}" :to="getUrl('contact')">
+       CONTACT
       </router-link>
     </ul>
   </nav>

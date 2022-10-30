@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex justify-items-center 100w">
-      <Nav currentPage="artists"></Nav>
+      <Nav currentPage="people"></Nav>
     </div>
     <div class="center-content w100 mt200">
       <div class="flex justify-content-center w100">
