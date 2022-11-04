@@ -10,15 +10,15 @@
       </router-link>
       <router-link class="mr10 pointer link"
                    v-bind:class="{underline:currentPage==='people'}" :to="getUrl('people')">
-       PEOPLE
+        PEOPLE
       </router-link>
-      <router-link class="mr10 pointer link"
+      <router-link class="mr10 pointer link" v-if="venues.length"
                    v-bind:class="{underline:currentPage==='venues'}" :to="getUrl('venues')">
-       VENUES
+        VENUES
       </router-link>
       <router-link class="mr10 pointer link"
                    v-bind:class="{underline:currentPage==='contact'}" :to="getUrl('contact')">
-       CONTACT
+        CONTACT
       </router-link>
     </ul>
   </nav>
@@ -26,6 +26,7 @@
 
 <script>
 import helpers from "@/mixins/helpers";
+import { theme, events, artists, venues} from "../store";
 
 export default {
   name: "Nav",
@@ -36,10 +37,11 @@ export default {
   },
   data() {
     return {
-      fixed: false
+      fixed: false,
+      theme, events, artists, venues
     };
   },
-  mixins: [helpers],
+  mixins: [helpers]
 };
 
 
@@ -61,6 +63,7 @@ export default {
   margin-top: 0;
   padding-top: 0;
 }
+
 .mr10 {
   margin-right: 10px;
 }

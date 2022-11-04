@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-items-center">
-    <Nav currentPage="places"></Nav>
+    <Nav currentPage="venues"></Nav>
   </div>
 </template>
 
@@ -9,10 +9,14 @@ import Nav from "@/components/Nav";
 
 export default {
   name: "PlaceList",
+  metaInfo:{
+    title:'Venues | Lune Storm'
+  },
   components: {Nav}
 };
 </script>
 
 <style scoped>
+@import "../assets/styles/animations.css";
 
 </style>

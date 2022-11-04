@@ -5,8 +5,7 @@
   >
     <div>
       <h1 class="h1 no-wrap"
-          v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
-          :style="{'letterSpacing':letterSpacing}">LUNESTORM </h1>
+          v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}" >LUNE STORM </h1>
     </div>
     <router-view></router-view>
   </div>
@@ -14,28 +13,11 @@
 <script>
 
 import helpers from "@/mixins/helpers.js";
-import Home from "@/components/Home";
 
 export default {
   name: "App",
-  components: {
-    // eslint-disable-next-line vue/no-unused-components
-    Home
-  },
   mounted() {
-    const number = Math.round((window.innerWidth - 400) / 8);
-    this.letterSpacing = `${number}px`;
-    window.addEventListener("resize", () => {
-      const number = Math.round((window.innerWidth - 400) / 8);
-      this.letterSpacing = `${number}px`;
-    });
-
     this.setTheme(this.getPage());
-  },
-  data() {
-    return {
-      letterSpacing: "1px"
-    };
   },
   mixins: [helpers]
 };
@@ -43,7 +25,10 @@ export default {
 
 <style>
 @import "./assets/styles/theme.css";
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .app {
   transition: 500ms;
 }
@@ -79,13 +64,13 @@ body {
   text-align: center;
   text-wrap: none;
   transition: 1000ms color linear;
+  letter-spacing: 20px;
 }
-
-
 @media (max-width: 600px) {
   .h1 {
     margin: 0px;
     padding: 0px;
+    letter-spacing: initial;
   }
 }
 

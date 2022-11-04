@@ -15,7 +15,7 @@ const events = [
       name: "Kostel sv. Martina ve zdi",
       url: "https://www.google.com/maps/place/The+Church+of+St.+Martin+in+the+Wall/@50.0831299,14.4198462,15z/data=!4m5!3m4!1s0x0:0x7a4479b958a5120e!8m2!3d50.0831016!4d14.419851"
     },
-    artists: ["grafik"],
+    artists: ["grafik"]
     // description: "Zveme vás na elektro-ekumenu!"
   },
   {
@@ -43,8 +43,19 @@ const artists = [
   }
 ];
 
+const venues = []
+
+const contact = {
+  mail: "info@lunestorm.com",
+  phone: "111222333",
+  fb: "",
+  ig: ""
+};
+
 export {
   theme,
   events,
-  artists
+  artists,
+  contact,
+  venues
 };

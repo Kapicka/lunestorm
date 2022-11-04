@@ -3,7 +3,7 @@
     <div class="flex justify-items-center 100w">
       <Nav class="nav" currentPage="events"></Nav>
     </div>
-    <div class="center-content w100 mt200">
+    <div class="center-content w100 mt200 fade-in">
       <div class="flex justify-content-center flex-direction-column w100">
         <div class="list-item" v-for="(event,i ) in events" v-bind:key="event.key">
           <div class="flex-mobile flex flex-gap-10 align-items-end">
@@ -21,7 +21,7 @@
               </a>
             </div>
           </div>
-          <HidebleDescription class=" description-mobile text-align-center mt20" v-if="!!event.description">
+          <HidebleDescription class="description-mobile text-align-center mt20" v-if="!!event.description || !!event.artists">
             <div class="mt20">
               <div>{{ event.description }}</div>
               <div class="justify-content-center mt20" v-if="event.artists && event.artists.length">
@@ -29,7 +29,7 @@
                 <div class="mt5">
                   <div v-bind:key="artist.key" v-for="artist of event.artists">
                     <router-link class="link link--start ml5" v-if="!!getArtistName(artist)"
-                                 :to="getUrl(`artists#${artist}`)">{{ getArtistName(artist) }}*
+                                 :to="getUrl(`people#${artist}`)">{{ getArtistName(artist) }}*
                     </router-link>
                     <div v-else>{{ artist }}*</div>
                   </div>
@@ -53,6 +53,9 @@ import { artists } from "@/store";
 
 export default {
   name: "EventList",
+  metaInfo:{
+    title:'Events | Lune Storm'
+  },
   components: { HidebleDescription, Nav },
   data() {
     return {
@@ -80,6 +83,7 @@ export default {
 <style>
 @import "../assets/styles/common.css";
 @import "../assets/styles/list.css";
+@import "../assets/styles/animations.css";
 
 @media (max-width: 500px) {
   .flex-mobile {
