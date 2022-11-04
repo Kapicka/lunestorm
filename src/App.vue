@@ -68,6 +68,7 @@ body {
 }
 @media (max-width: 600px) {
   .h1 {
+    font-size: 56px;
     margin: 0px;
     padding: 0px;
     letter-spacing: initial;
