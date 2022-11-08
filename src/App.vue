@@ -5,7 +5,7 @@
   >
     <div>
       <h1 class="h1 no-wrap"
-          v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}" >LUNE STORM </h1>
+          v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}" >LUNESTORM </h1>
     </div>
     <router-view></router-view>
   </div>
