@@ -5,7 +5,7 @@ const events = [
   {
     key: "electroecumene",
     type: ["electro", "ecumene"],
-    name: "Oecumene Electronica",
+    name: "Oecumena Electronica",
     date: "18.11.2022 18:30",
     links: [
       { name: "fb", url: "https://www.facebook.com/events/1131298834180662" },

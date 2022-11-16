@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-items-center">
+  <div class="flex justify-items-center 100w">
     <Nav currentPage="venues"></Nav>
   </div>
 </template>
