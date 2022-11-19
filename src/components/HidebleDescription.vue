@@ -1,7 +1,7 @@
 <template>
   <div>
     <div @click="opened = !opened" class="text-align-center text-button mt20">
-      {{ opened ? "[ Méně ]" : "[ Více ]" }}
+      {{ opened ? "[ Less ]" : "[ More ]" }}
     </div>
     <slot class="mt20" v-if="opened"></slot>
   </div>

@@ -3,42 +3,24 @@
     <div class="flex justify-items-center 100w">
       <Nav class="nav" currentPage="events"></Nav>
     </div>
-    <div class="center-content w100 mt200 fade-in">
-      <div class="flex justify-content-center flex-direction-column w100">
-        <div class="list-item" v-for="(event,i ) in events" v-bind:key="event.key">
-          <div class="flex-mobile flex flex-gap-10 align-items-end">
-            <div class="text-align-center-mobile">
-              <div class="bold">{{ event.date }}</div>
-              <div class="bold">{{ event.name }}</div>
-            </div>
-            <a class="link link--star" v-if="event.place" target="_blank" :href="event.place.url">
-              {{ event.place.name }}
-            </a>
-            <div class="flex">
-              <a class="flex float-left link link--star ml5" v-bind:key="`link_${i}`" :href="link.url"
-                 v-for="(link,i) of event.links">
-                {{ link.name }}
-              </a>
-            </div>
+    <div>
+      <div class="center-content w100 mt200 fade-in" v-if="upcomingEvents.length">
+        <div  class="flex justify-content-center flex-direction-column w100">
+          <h2 class="text-align-center bold pb20 h2"> Upcoming events</h2>
+          <div :key="event.key" v-for="(event,i) in upcomingEvents">
+            <EventListItem :event="event" />
+            <div v-if="i !== upcomingEvents.length-1" class="w100 text-align-center break">~</div>
           </div>
-          <HidebleDescription class="description-mobile text-align-center mt20" v-if="!!event.description || !!event.artists">
-            <div class="mt20">
-              <div>{{ event.description }}</div>
-              <div class="justify-content-center mt20" v-if="event.artists && event.artists.length">
-                <div>Účinkující:</div>
-                <div class="mt5">
-                  <div v-bind:key="artist.key" v-for="artist of event.artists">
-                    <router-link class="link link--start ml5" v-if="!!getArtistName(artist)"
-                                 :to="getUrl(`people#${artist}`)">{{ getArtistName(artist) }}*
-                    </router-link>
-                    <div v-else>{{ artist }}*</div>
-                  </div>
-                </div>
-              </div>
-              <div class="mt20" v-if="event.price">Vstupné: {{ event.price }}</div>
-            </div>
-          </HidebleDescription>
-          <div v-if="i !==events.length-1" class="w100 text-align-center break">~</div>
+        </div>
+      </div>
+      <div v-if="pastEvents.length">
+        <div
+          class="flex justify-content-center flex-direction-column w100">
+          <h2 class="text-align-center bold pb20 pt50"> Past events</h2>
+          <div :key="event.key" v-for="(event,i) in pastEvents">
+            <EventListItem :event="event" />
+            <div v-if="i !== eventItems.length-1" class="w100 text-align-center break">~</div>
+          </div>
         </div>
       </div>
     </div>
@@ -48,28 +30,47 @@
 <script>
 import helpers from "@/mixins/helpers";
 import Nav from "@/components/Nav";
-import HidebleDescription from "@/components/HidebleDescription";
 import { artists } from "@/store";
+import EventListItem from "@/components/EventListItem";
+import moment from "moment";
 
 export default {
   name: "EventList",
-  metaInfo:{
-    title:'Events | Lune Storm'
+  metaInfo: {
+    title: "Events | Lune Storm"
   },
-  components: { HidebleDescription, Nav },
+  components: { Nav, EventListItem },
   data() {
     return {
       artists
     };
   },
+  computed: {
+    eventItems() {
+      return this.events.map(e => ({ ...e, artists: this.getArtistList(e.artists) }));
+    },
+    pastEvents() {
+      return this.eventItems.filter(this.isPastEvent);
+    },
+    upcomingEvents() {
+      return this.eventItems.filter(event => !this.isPastEvent(event));
+    }
+  },
   mixins: [helpers],
   methods: {
-    hasArtist(key) {
-      return !!this.artists.find(a => a.key === key);
+    isPastEvent(event) {
+      return moment().isAfter(event.dateEnd);
     },
-    getArtistName(key) {
+    getArtistList(artistKeys) {
+      if (!artistKeys) {
+        return undefined;
+      }
+      console.log(artistKeys);
+      return artistKeys.map(ak => this.getArtist(ak));
+    },
+    getArtist(key) {
       const artist = this.artists.find(a => a.key === key);
-      return artist ? artist.name : key;
+      return artist ? artist : { name: key, key, type: ["electro", "ecumene"] };
     }
   },
   props: {
@@ -81,26 +82,9 @@ export default {
 </script>
 
 <style>
-@import "../assets/styles/common.css";
-@import "../assets/styles/list.css";
-@import "../assets/styles/animations.css";
-
-@media (max-width: 500px) {
-  .flex-mobile {
-    flex-direction: column;
-    gap: 1px;
-    align-items: center;
-  }
-
-  .description-mobile {
-    text-align: center;
-  }
-
-  .text-align-center-mobile {
-    text-align: center;
-  }
-
-
+.rule {
+  padding-top: 20px;
 }
+
 
 </style>

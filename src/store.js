@@ -1,12 +1,12 @@
 const theme = { value: "electro" };
 
-
 const events = [
   {
     key: "electroecumene",
     type: ["electro", "ecumene"],
     name: "Oecumena Electronica",
-    date: "18.11.2022 18:30",
+    dateStart: "2022-11-18T18:30",
+    dateEnd: "2022-11-18T21:00",
     links: [
       { name: "fb", url: "https://www.facebook.com/events/1131298834180662" },
       { name: "ig", url: "https://www.instagram.com/oecumena_electronica/" }
@@ -26,8 +26,8 @@ const events = [
       name: "Dobrovice u Mladé Boleslavi",
       url: "https://en.mapy.cz/zakladni?q=dobrovice%20u%20mlad%C3%A9%20boleslavi&source=muni&id=3937&ds=1&x=14.9486596&y=50.3701918&z=12"
     },
-    date: "17.12.2022"
-
+    dateStart: "2022-12-17",
+    dateEnd: "2022-12-17"
   }
 ];
 const artists = [
@@ -43,7 +43,7 @@ const artists = [
   }
 ];
 
-const venues = []
+const venues = [];
 
 const contact = {
   mail: "info@lunestorm.com",
