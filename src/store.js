@@ -22,12 +22,8 @@ const events = [
     key: "matrix",
     type: ["electro"],
     name: "Matrix",
-    place: {
-      name: "Dobrovice u Mladé Boleslavi",
-      url: "https://en.mapy.cz/zakladni?q=dobrovice%20u%20mlad%C3%A9%20boleslavi&source=muni&id=3937&ds=1&x=14.9486596&y=50.3701918&z=12"
-    },
-    dateStart: "2022-12-17",
-    dateEnd: "2022-12-17"
+    dateStart: "2022-12-09",
+    dateEnd: "2022-12-10"
   }
 ];
 const artists = [
