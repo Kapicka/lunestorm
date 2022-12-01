@@ -22,6 +22,10 @@ const events = [
     key: "matrix",
     type: ["electro"],
     name: "Matrix",
+    place: {
+      name: "District X",
+      url: "https://mapy.cz/zakladni?q=district%20x&source=firm&id=13022492&ds=2&x=14.4755192&y=50.1121018&z=17"
+    },
     dateStart: "2022-12-09",
     dateEnd: "2022-12-10"
   }
