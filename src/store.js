@@ -22,12 +22,27 @@ const events = [
     key: "matrix",
     type: ["electro"],
     name: "Matrix",
+    price: "200 Kč, with costume: 100 Kč",
     place: {
       name: "District X",
       url: "https://mapy.cz/zakladni?q=district%20x&source=firm&id=13022492&ds=2&x=14.4755192&y=50.1121018&z=17"
     },
     dateStart: "2022-12-09",
     dateEnd: "2022-12-10"
+  },
+  {
+    key: "dymky",
+    type: ["electro"],
+    name: "Dýmky na kopci",
+    place: {
+      name: "Klub Čajovna",
+      url: "https://www.facebook.com/KlubCajovna"
+    },
+    links: [
+      { name: "fb", url: "https://fb.me/e/2AM11QFN2" },
+    ],
+    dateStart: "2023-06-10T13:00",
+    dateEnd: "2023-06-11T04:00"
   }
 ];
 const artists = [

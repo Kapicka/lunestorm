@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="mt20" v-if="event.price">Price: {{ event.price }}</div>
+        <div class="mt20" v-if="event.price">Entry: {{ event.price }}</div>
       </div>
     </HidebleDescription>
   </div>
