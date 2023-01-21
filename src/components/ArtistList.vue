@@ -4,7 +4,7 @@
       <Nav currentPage="people"></Nav>
     </div>
     <div class="center-content w100 mt200 fade-in">
-      <div class="flex justify-content-center w100">
+      <div class="justify-content-center w100">
         <div
           class="list-item"
           v-for="(artist,i) in artists"
@@ -35,8 +35,8 @@ import { events } from "@/store";
 export default {
   name: "ArtistList",
   components: { HidebleDescription, Nav },
-  metaInfo:{
-    title:'People | Lune Storm'
+  metaInfo: {
+    title: "People | Lune Storm"
   },
   data() {
     return {
@@ -60,8 +60,14 @@ export default {
 
 <style scoped>
 @import "../assets/styles/animations.css";
+
 .first-link:first-child {
   margin-left: 0;
 }
 
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>

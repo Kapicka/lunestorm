@@ -43,6 +43,15 @@ const events = [
     ],
     dateStart: "2023-06-10T13:00",
     dateEnd: "2023-06-11T04:00"
+  },
+  {
+    key: "lunestorm_live",
+    type: ["electro"],
+    name: "LUNESTORM LIVE",
+    links: [ ],
+    artists: ["grafik","infarct"],
+    dateStart: "2023-02-10T20:00",
+    dateEnd: "2023-02-03T08:00"
   }
 ];
 const artists = [
@@ -55,6 +64,12 @@ const artists = [
       { name: "SoundCloud", url: "https://soundcloud.com/grafikmarek" },
       { name: "fb", url: "https://www.facebook.com/marekgabik8" }
     ]
+  },
+  {
+    name: "Infarct",
+    type: ["electro", "ecumene"],
+    key: "infarct",
+    links: [ ]
   }
 ];
 
