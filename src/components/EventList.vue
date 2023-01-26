@@ -5,7 +5,7 @@
     </div>
     <div>
       <div class="center-content w100 mt200 fade-in" v-if="upcomingEvents.length">
-        <div  class="flex justify-content-center flex-direction-column w100">
+        <div class="flex justify-content-center flex-direction-column w100">
           <h2 class="text-align-center bold pb20 h2"> Upcoming events</h2>
           <div :key="event.key" v-for="(event,i) in upcomingEvents">
             <EventListItem :event="event" />
@@ -50,10 +50,12 @@ export default {
       return this.events.map(e => ({ ...e, artists: this.getArtistList(e.artists) }));
     },
     pastEvents() {
-      return this.eventItems.filter(this.isPastEvent);
+      return this.eventItems.filter(this.isPastEvent)
+        .sort((a, b) => moment(a.dateStart).unix() - moment(b.dateStart).unix());
     },
     upcomingEvents() {
-      return this.eventItems.filter(event => !this.isPastEvent(event));
+      return this.eventItems.filter(event => !this.isPastEvent(event))
+        .sort((a, b) => moment(a.dateStart).unix() - moment(b.dateStart).unix());
     }
   },
   mixins: [helpers],
