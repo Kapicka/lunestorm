@@ -50,8 +50,8 @@ const events = [
     name: "LUNESTORM LIVE",
     links: [ ],
     artists: ["grafik","infract","bena"],
-    dateStart: "2023-02-10T20:00",
-    dateEnd: "2023-02-03T08:00"
+    dateStart: "2023-02-11T20:00",
+    dateEnd: "2023-02-12T08:00"
   }
 ];
 const artists = [
