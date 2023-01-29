@@ -70,7 +70,7 @@ const artists = [
     ]
   },
   {
-    name: "INFRACT",
+    name: "Infract",
     type: ["electro", "ecumene"],
     key: "infract",
     links: [ ]
