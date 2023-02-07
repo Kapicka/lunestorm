@@ -48,14 +48,12 @@ const events = [
     key: "lunestorm_live",
     type: ["electro"],
     name: "LUNESTORM LIVE",
-    links: [ ],
+    links: [ { name: "fb", url: "https://fb.me/e/2DSyQ2Xia" },
+    ],
     place: {
       name: "Vacuum Art Space",
       url: "https://www.google.com/maps/place/Vacuum+Art+Space,+z.s./@50.0662146,14.4491341,17z/data=!3m1!4b1!4m6!3m5!1s0x470b938025f534dd:0x545a2d97e45572da!8m2!3d50.0662112!4d14.4513228!16s%2Fg%2F11cpkylc8g"
     },
-    links: [
-      { name: "fb", url: "https://fb.me/e/2DSyQ2Xia" },
-    ],
     artists: ["grafik","infract","bena"],
     dateStart: "2023-02-11T20:00",
     dateEnd: "2023-02-12T08:00"
