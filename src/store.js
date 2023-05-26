@@ -41,8 +41,8 @@ const events = [
     links: [
       { name: "fb", url: "https://fb.me/e/2AM11QFN2" },
     ],
-    dateStart: "2023-06-10T13:00",
-    dateEnd: "2023-06-11T04:00"
+    dateStart: "2023-06-17T13:00",
+    dateEnd: "2023-06-18T04:00"
   },
   {
     key: "lunestorm_live",
