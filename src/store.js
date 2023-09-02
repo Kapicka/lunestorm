@@ -9,7 +9,7 @@ const events = [
     dateEnd: "2023-11-03T20:00",
     links: [
       // { name: "fb", url: "https://www.facebook.com/events/1131298834180662" },
-      // { name: "ig", url: "https://www.instagram.com/oecumena_electronica/" }
+      { name: "ig", url: "https://www.instagram.com/p/ClGYCnoIVju/" }
     ],
     place: {
       name: "Kostel sv. Martina ve zdi",
