@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <div class="flex justify-items-center 100w">
+  <div class="w100 center-content">
       <Nav currentPage="people"></Nav>
-    </div>
-    <div class="center-content w100 mt200 fade-in">
+    <div class=" w100 mt10 fade-in">
       <div class="justify-content-center w100">
         <div
           class="list-item"

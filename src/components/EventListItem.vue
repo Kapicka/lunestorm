@@ -15,7 +15,7 @@
         </a>
       </div>
     </div>
-    <HidebleDescription class="description-mobile text-align-center mt20" v-if="!!event.description || !!event.artists">
+    <HidebleDescription class="description-mobile text-align-center mt20" v-if="!!event.description || (event.artists && !!event.artists.length)">
       <div class="mt20">
         <div>{{ event.description }}</div>
         <div class="justify-content-center mt20" v-if="event.artists && event.artists.length">

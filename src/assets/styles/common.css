@@ -1,9 +1,17 @@
 h2 {
-   font-size: 18px;
+    font-size: 18px;
 }
+
 .center-content {
     display: flex;
     justify-items: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+.align-content-center {
+    align-content: center;
 }
 
 .justify-items-center {
@@ -34,6 +42,13 @@ h2 {
     position: fixed;
 }
 
+.fixed-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
 .w100 {
     width: 100%
 }
@@ -56,7 +71,19 @@ h2 {
 }
 
 .mt200 {
-    margin-top: 60px;
+    margin-top: 200px;
+}
+
+.mt100 {
+    margin-top: 100px;
+}
+
+.mt80 {
+    margin-top: 80px;
+}
+
+.mt70 {
+    margin-top: 70px;
 }
 
 .pointer {
@@ -90,7 +117,7 @@ h2 {
 }
 
 .link--star::after {
-   content: "*";
+    content: "*";
 }
 
 .py5 {
@@ -106,9 +133,11 @@ h2 {
     padding-bottom: 2px;
     border-bottom: 1px solid;
 }
+
 .pt50 {
     padding-top: 50px;
 }
+
 .pb20 {
     padding-bottom: 20px;
 }

@@ -11,8 +11,8 @@
           </div>
         </router-link>
       </div>
-      <div>
-        <router-view></router-view>
+      <div ref="content" class="app-content center-content">
+        <router-view />
       </div>
       <div class="fixed side-bar side-bar--right link ">
         <router-link @click.native="setTheme('ecumene')"
@@ -41,6 +41,10 @@ export default {
   mixins: [helpers],
   beforeMount() {
     this.setTheme(this.getPage());
+    this.getEmitter().on("scroll-up", () => {
+      this.$refs.content.scrollTo({ top: 0, behavior: "smooth" });
+
+    });
   },
   methods: {
     getPageUrl(page) {
@@ -60,6 +64,7 @@ export default {
 }
 
 .side-bar {
+  z-index: 100;
   top: 40%;
   transform: rotate(-90deg);
 }
@@ -74,6 +79,16 @@ export default {
 
 .fixed {
   position: fixed;
+}
+
+.app-content {
+  position: fixed;
+  top: 150px;
+  left: 15px;
+  right: 15px;
+  width: 100%;
+  height: calc(100vh - 150px);
+  overflow-y: scroll;
 }
 
 @media (max-width: 600px) {

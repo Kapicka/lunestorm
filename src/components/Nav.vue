@@ -1,6 +1,7 @@
 <template>
-  <nav class="nav"
-       v-bind:class="{fixed}"
+  <nav class="nav fixed-container top75"
+       v-bind:class=" { fixed, }"
+       style="{overflow: hidden}"
   >
     <ul class="ul flex"
     >
@@ -22,7 +23,7 @@
 
 <script>
 import helpers from "@/mixins/helpers";
-import { theme, events, artists, venues} from "../store";
+import { artists, events, theme, venues } from "../store";
 
 export default {
   name: "Nav",
@@ -59,6 +60,11 @@ export default {
   margin-top: 0;
   padding-top: 0;
 }
+
+.top75 {
+  top: 75px;
+}
+
 
 .mr10 {
   margin-right: 10px;

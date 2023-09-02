@@ -1,4 +1,7 @@
+import EventEmitter from "../EventEmmiter";
 const theme = { value: "electro" };
+const emitter = new EventEmitter();
+
 
 const events = [
   {
@@ -98,5 +101,6 @@ export {
   events,
   artists,
   contact,
-  venues
+  venues,
+  emitter
 };

@@ -4,6 +4,12 @@
 .color--ecumene {
     color: #ffecc1;
 }
+.bg--electro {
+    background-color: #1a1a1a;
+}
+.bg--ecumene {
+    background-color: #fff2d8;
+}
 .border-right--black {
     border-right: 1px solid black;
 }

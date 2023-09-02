@@ -1,4 +1,4 @@
-import { theme } from "@/store.js";
+import { theme,emitter } from "@/store.js";
 
 const helpers = {
   data() {
@@ -13,6 +13,12 @@ const helpers = {
     setTheme(inputTheme) {
       theme.value = inputTheme;
       document.querySelector('body').className = theme.value
+    },
+    getTheme() {
+      return theme.value;
+    },
+    getEmitter() {
+      return emitter;
     },
     getPage(){
       return this.$route.path.includes("ecumene") ? "ecumene" : "electro";

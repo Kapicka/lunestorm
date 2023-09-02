@@ -1,26 +1,19 @@
 <template>
-  <div>
-    <div class="flex justify-items-center 100w">
-      <Nav class="nav" currentPage="events"></Nav>
-    </div>
-    <div>
-      <div class="center-content w100 mt200 fade-in" v-if="upcomingEvents.length">
-        <div class="flex justify-content-center flex-direction-column w100">
-          <h2 class="text-align-center bold pb20 h2"> Upcoming events</h2>
-          <div :key="event.key" v-for="(event,i) in upcomingEvents">
-            <EventListItem :event="event" />
-            <div v-if="i !== upcomingEvents.length-1" class="w100 text-align-center break">~</div>
-          </div>
+  <div class="w100 center-content">
+    <Nav class="nav" currentPage="events"></Nav>
+    <div class=" w100 mt10 fade-in">
+      <div class="flex flex-direction-column align-items-center justify-content-center w100 fade-in" v-if="upcomingEvents.length">
+        <h2 class=" bold pb20 h2"> Upcoming events</h2>
+        <div style="min-width: 400px" :key="event.key" v-for="(event,i) in upcomingEvents">
+          <EventListItem :event="event" />
+          <div v-if="i !== upcomingEvents.length-1" class="w100 text-align-center break">~</div>
         </div>
       </div>
-      <div v-if="pastEvents.length">
-        <div
-          class="flex justify-content-center flex-direction-column w100">
-          <h2 class="text-align-center bold pb20 pt50"> Past events</h2>
-          <div :key="event.key" v-for="(event,i) in pastEvents">
-            <EventListItem :event="event" />
-            <div v-if="i !== eventItems.length-1" class="w100 text-align-center break">~</div>
-          </div>
+      <div class="flex flex-direction-column align-items-center justify-content-center w100 fade-in" v-if="pastEvents.length">
+        <h2 class="text-align-center bold pb20 pt50"> Past events</h2>
+        <div style="min-width: 400px" :key="event.key" v-for="(event,i) in pastEvents">
+          <EventListItem :event="event" />
+          <div v-if="i !== eventItems.length-1" class="w100 text-align-center break">~</div>
         </div>
       </div>
     </div>
@@ -67,7 +60,6 @@ export default {
       if (!artistKeys) {
         return undefined;
       }
-      console.log(artistKeys);
       return artistKeys.map(ak => this.getArtist(ak));
     },
     getArtist(key) {

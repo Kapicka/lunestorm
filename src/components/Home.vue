@@ -22,10 +22,8 @@
         <router-link class="decoration-none" to="/ecumene">
           <div
             @mouseenter="setTheme('ecumene')"
-            v-bind:class="{
-            ' color--ecumene': isTheme('electro'),
-            ' underline  color--electro': isTheme('ecumene')} "
             class="h60 p20  text-align-left menu-text"
+            style="{overflow: hidden}"
           >
             ECUMENE
           </div>
