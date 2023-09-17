@@ -1,9 +1,27 @@
 import EventEmitter from "../EventEmmiter";
+
 const theme = { value: "electro" };
 const emitter = new EventEmitter();
 
 
 const events = [
+  {
+    key: "electroecumene_11_2023",
+    type: ["ecumene"],
+    name: "Bohoslužba",
+    dateStart: "2023-10-22T08:30",
+    dateEnd: "2023-10-22T09:30",
+    links: [
+      { name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
+      { name: "ig", url: "https://www.instagram.com/oecumena_electronica" }
+    ],
+    place: {
+      name: "Kostel Českobratrské církve evangelické v Jimramově",
+      url: "https://mapy.cz/s/hubarerulo"
+    },
+    artists: []
+    // description: "Zveme vás na elektro-ekumenu!"
+  },
   {
     key: "electroecumene_11_2023",
     type: ["electro", "ecumene"],
@@ -104,3 +122,4 @@ export {
   venues,
   emitter
 };
+
