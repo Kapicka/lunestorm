@@ -5,7 +5,7 @@
         <div class="bold">{{ event.dateStart | formatDate }}</div>
         <div class="bold">{{ event.name }}</div>
       </div>
-      <a class="link link--star" v-if="event.place" target="_blank" :href="event.place.url">
+      <a class="link link--star text-align-center max-w250 " v-if="event.place" target="_blank" :href="event.place.url">
         {{ event.place.name }}
       </a>
       <div class="flex">

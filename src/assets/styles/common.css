@@ -65,6 +65,9 @@ h2 {
 .text-align-center {
     text-align: center;
 }
+.max-w250 {
+    max-width: 250px;
+}
 
 .text-align-right {
     text-align: right;
