@@ -22,15 +22,15 @@ const events = [
     key: "electroecumene_11_2023",
     type: ["electro", "ecumene"],
     name: "Oecumena Electronica",
-    dateStart: "2023-11-03T18:30",
-    dateEnd: "2023-11-03T20:00",
+    dateStart: "2023-11-04T18:30",
+    dateEnd: "2023-11-04T20:00",
     links: [
       { name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
       { name: "ig", url: "https://www.instagram.com/oecumena_electronica" }
     ],
     /*place: {
-      name: "Kostel sv. Martina ve zdi",
-      url: "https://www.google.com/maps/place/The+Church+of+St.+Martin+in+the+Wall/@50.0831299,14.4198462,15z/data=!4m5!3m4!1s0x0:0x7a4479b958a5120e!8m2!3d50.0831016!4d14.419851"
+      name: "Kostel Českobratrské církve evangelické na Vinohradech",
+      url: "https://maps.app.goo.gl/cKEdeh4xrtBN4rjz9"
     }, */
     artists: []
     // description: "Zveme vás na elektro-ekumenu!"
