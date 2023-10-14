@@ -28,10 +28,10 @@ const events = [
       { name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
       { name: "ig", url: "https://www.instagram.com/oecumena_electronica" }
     ],
-    /*place: {
+    place: {
       name: "Kostel Českobratrské církve evangelické na Vinohradech",
       url: "https://maps.app.goo.gl/cKEdeh4xrtBN4rjz9"
-    }, */
+    },
     artists: []
     // description: "Zveme vás na elektro-ekumenu!"
   },
