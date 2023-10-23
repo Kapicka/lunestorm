@@ -6,7 +6,7 @@ const emitter = new EventEmitter();
 
 const events = [
   {
-    key: "electroecumene_11_2023",
+    key: "jimramov_aragorn",
     type: ["ecumene"],
     name: "Bohoslužba",
     dateStart: "2023-10-22T08:30",
@@ -22,8 +22,8 @@ const events = [
     key: "electroecumene_11_2023",
     type: ["electro", "ecumene"],
     name: "Oecumena Electronica",
-    dateStart: "2023-11-04T18:30",
-    dateEnd: "2023-11-04T20:00",
+    dateStart: "2023-11-04T19:00",
+    dateEnd: "2023-11-04T21:00",
     links: [
       { name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
       { name: "ig", url: "https://www.instagram.com/oecumena_electronica" }
