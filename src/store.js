@@ -5,6 +5,40 @@ const emitter = new EventEmitter();
 
 
 const events = [
+    {
+    key: "control_the_matrix_2024",
+    type: ["electro"],
+    name: "Control The Matrix (CtrlArtDel + LUNESTORM",
+    dateStart: "2024-02-17T21:00",
+    dateEnd: "2024-02-18T08:00",
+    links: [
+      { //name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
+      { name: "ig_CtrlArtDel", url: "https://www.instagram.com/ctrlartdelrecords" }
+    ],
+    place: {
+      name: "Klub FAMU",
+      url: "https://maps.app.goo.gl/rAd3wXfb4waD2eHr9"
+    },
+    artists: ["soda", "grafik", "efectiv", "infract"]
+    // description: "Zveme vás na elektro-ekumenu!"
+  },  
+  {
+    key: "electroecumene_3_2024",
+    type: ["electro", "ecumene"],
+    name: "Oecumena Electronica",
+    dateStart: "2024-03-29T19:00",
+    dateEnd: "2024-03-29T21:00",
+    links: [
+      //{ name: "fb", url: "https://www.facebook.com/events/" },
+      { name: "ig", url: "https://www.instagram.com/oecumena.electronica" }
+    ],
+    place: {
+      name: "TBA",
+      //url: ""
+    },
+    artists: []
+    // description: "Zveme vás na elektro-ekumenu!"
+  },
   {
     key: "jimramov_aragorn",
     type: ["ecumene"],
@@ -32,7 +66,7 @@ const events = [
       name: "Kostel Českobratrské církve evangelické na Vinohradech",
       url: "https://maps.app.goo.gl/cKEdeh4xrtBN4rjz9"
     },
-    artists: []
+    artists: ["grafik", "soda"]
     // description: "Zveme vás na elektro-ekumenu!"
   },
   {
@@ -97,6 +131,18 @@ const artists = [
     name: "Beña",
     type: ["electro", "ecumene"],
     key: "bena",
+    links: []
+  }
+  {
+    name: "DJ Soda",
+    type: ["electro", "ecumene"],
+    key: "soda",
+    links: []
+  }
+  {
+    name: "Efectiv",
+    type: ["electro"],
+    key: "efectiv",
     links: []
   }
 ];
