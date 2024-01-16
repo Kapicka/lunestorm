@@ -5,15 +5,15 @@ const emitter = new EventEmitter();
 
 
 const events = [
-    {
+  {
     key: "control_the_matrix_2024",
     type: ["electro"],
     name: "Control The Matrix (CtrlArtDel + LUNESTORM",
     dateStart: "2024-02-17T21:00",
     dateEnd: "2024-02-18T08:00",
     links: [
-      { //name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
-      { name: "ig_CtrlArtDel", url: "https://www.instagram.com/ctrlartdelrecords" }
+      //{ name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
+      { name: "ig", url: "https://www.instagram.com/ctrlartdelrecords" }
     ],
     place: {
       name: "Klub FAMU",
@@ -21,7 +21,7 @@ const events = [
     },
     artists: ["soda", "grafik", "efectiv", "infract"]
     // description: "Zveme vás na elektro-ekumenu!"
-  },  
+  },
   {
     key: "electroecumene_3_2024",
     type: ["electro", "ecumene"],
@@ -33,7 +33,7 @@ const events = [
       { name: "ig", url: "https://www.instagram.com/oecumena.electronica" }
     ],
     place: {
-      name: "TBA",
+      name: "TBA"
       //url: ""
     },
     artists: []
@@ -132,13 +132,13 @@ const artists = [
     type: ["electro", "ecumene"],
     key: "bena",
     links: []
-  }
+  },
   {
     name: "DJ Soda",
     type: ["electro", "ecumene"],
     key: "soda",
     links: []
-  }
+  },
   {
     name: "Efectiv",
     type: ["electro"],
