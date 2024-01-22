@@ -12,7 +12,7 @@ const events = [
     dateStart: "2024-02-17T21:00",
     dateEnd: "2024-02-18T08:00",
     links: [
-      //{ name: "fb", url: "https://www.facebook.com/events/1724506074638585/" },
+      { name: "fb", url: "https://www.facebook.com/events/907901173873591" },
       { name: "ig", url: "https://www.instagram.com/ctrlartdelrecords" }
     ],
     place: {
