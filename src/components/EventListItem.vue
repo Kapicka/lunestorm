@@ -3,8 +3,14 @@
     <div class="flex-mobile flex flex-gap-10 align-items-end">
       <div class="text-align-center-mobile">
         <div class="bold">{{ event.dateStart | formatDate }}</div>
-        <div class="bold">{{ event.name }}</div>
+        <div>
+          <div class="bold">
+            {{ event.name }}
+          </div>
+          <div class="bold" v-if="event.secondLineName">{{ event.secondLineName }}</div>
+        </div>
       </div>
+
       <a class="link link--star text-align-center max-w250 " v-if="event.place" target="_blank" :href="event.place.url">
         {{ event.place.name }}
       </a>
@@ -15,7 +21,8 @@
         </a>
       </div>
     </div>
-    <HidebleDescription class="description-mobile text-align-center mt20" v-if="!!event.description || (event.artists && !!event.artists.length)">
+    <HidebleDescription class="description-mobile text-align-center mt20"
+                        v-if="!!event.description || (event.artists && !!event.artists.length)">
       <div class="mt20">
         <div>{{ event.description }}</div>
         <div class="justify-content-center mt20" v-if="event.artists && event.artists.length">

@@ -8,7 +8,8 @@ const events = [
   {
     key: "control_the_matrix_2024",
     type: ["electro"],
-    name: "Control The Matrix (CtrlArtDel + LUNESTORM",
+    name: "Control The Matrix",
+    secondLineName: "(CtrlArtDel + LUNESTORM)",
     dateStart: "2024-02-17T21:00",
     dateEnd: "2024-02-18T08:00",
     links: [
