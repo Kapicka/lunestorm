@@ -34,8 +34,8 @@ const events = [
       { name: "ig", url: "https://www.instagram.com/oecumena.electronica" }
     ],
     place: {
-      name: "TBA"
-      //url: ""
+      name: "Katedrální chrám sv. Vavřince",
+      url: "https://maps.app.goo.gl/z7TwLQn5TZ5SnQL97"
     },
     artists: []
     // description: "Zveme vás na elektro-ekumenu!"
