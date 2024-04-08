@@ -5,6 +5,25 @@ const emitter = new EventEmitter();
 
 
 const events = [
+ {
+    key: "control_the_matrix_20244",
+    type: ["electro"],
+    name: "Control The Matrix",
+    secondLineName: "(CtrlArtDel + LUNESTORM)",
+    dateStart: "2024-02-17T21:00",
+    dateEnd: "2024-02-18T08:00",
+    links: [
+      { name: "fb", url: "https://www.facebook.com/events/907901173873591" },
+      { name: "ig", url: "https://www.instagram.com/ctrlartdelrecords" }
+    ],
+    place: {
+      name: "Klub FAMU",
+      url: "https://maps.app.goo.gl/rAd3wXfb4waD2eHr9"
+    },
+    artists: ["soda", "grafik", "efectiv", "infract"]
+    // description: "Zveme vás na elektro-ekumenu!"
+  },
+
   {
     key: "control_the_matrix_2024",
     type: ["electro"],
