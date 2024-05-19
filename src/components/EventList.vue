@@ -44,7 +44,7 @@ export default {
     },
     pastEvents() {
       return this.eventItems.filter(this.isPastEvent)
-        .sort((a, b) => moment(a.dateStart).unix() - moment(b.dateStart).unix());
+        .sort((a, b) => moment(b.dateStart).unix() - moment(a.dateStart).unix());
     },
     upcomingEvents() {
       return this.eventItems.filter(event => !this.isPastEvent(event))

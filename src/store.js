@@ -5,27 +5,25 @@ const emitter = new EventEmitter();
 
 
 const events = [
- {
-    key: "control_the_matrix_20244",
-    type: ["electro"],
-    name: "Control The Matrix",
-    secondLineName: "(CtrlArtDel + LUNESTORM)",
-    dateStart: "2024-02-17T21:00",
-    dateEnd: "2024-02-18T08:00",
+  {
+    key: "velky_patek_2024",
+    type: ["electro", "ecumene"],
+    name: "Velký pátek",
+    dateStart: "2024-06-07",
+    dateEnd: "2024-06-07",
     links: [
-      { name: "fb", url: "https://www.facebook.com/events/907901173873591" },
-      { name: "ig", url: "https://www.instagram.com/ctrlartdelrecords" }
+      //{ name: "fb", url: "https://www.facebook.com/events/" },
+      { name: "ig", url: "https://www.instagram.com/oecumena.electronica" }
     ],
     place: {
-      name: "Klub FAMU",
-      url: "https://maps.app.goo.gl/rAd3wXfb4waD2eHr9"
+      name: "Kaple Božího hrobu, Petřínské sady 633",
+      url: "https://maps.app.goo.gl/jGe3V6LSH3vBKBix6"
     },
-    artists: ["soda", "grafik", "efectiv", "infract"]
+    artists: []
     // description: "Zveme vás na elektro-ekumenu!"
   },
-
-  {
-    key: "control_the_matrix_2024",
+ {
+    key: "control_the_matrix_20244",
     type: ["electro"],
     name: "Control The Matrix",
     secondLineName: "(CtrlArtDel + LUNESTORM)",
