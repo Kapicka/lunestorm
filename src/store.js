@@ -8,7 +8,7 @@ const events = [
   {
     key: "velky_patek_2024",
     type: ["electro", "ecumene"],
-    name: "Velký pátek",
+    name: "Noc kostelů",
     dateStart: "2024-06-07",
     dateEnd: "2024-06-07",
     links: [
