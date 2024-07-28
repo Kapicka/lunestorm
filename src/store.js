@@ -6,6 +6,40 @@ const emitter = new EventEmitter();
 
 const events = [
   {
+    key: "otevreno_2024",
+    type: ["ecumene","electro"],
+    name: "Instalace Oecumena Electronica",
+    secondLineName: "Festival Otevřeno",
+    dateStart: "2024-08-23",
+    dateEnd: "2024-08-25",
+    links: [
+      { name: "web", url: "https://jimramov.klubslunicko.cz"},
+      { name: "fb", url: "https://www.facebook.com/OtevrenoJimramov" }
+    ],
+    place: {
+      name: "Jimmramov",
+      url: "https://mapy.cz/s/dofapekade"
+    },
+    artists: []
+    // description: "Zveme vás na elektro-ekumenu!"
+  },
+  {
+    key: "sam_orlova_2024",
+    type: ["ecumene"],
+    name: "SAM Orlová",
+    dateStart: "2024-08-09",
+    //dateEnd: "2024-06-07",
+    links: [
+      { name: "web", url: "https://www.instagram.com/oecumena.electronica" }
+    ],
+    place: {
+      name: "Farní zahrada, Petra Cingra 1248, 735 11, Orlová",
+      url: "https://mapy.cz/s/ragezokada"
+    },
+    artists: []
+    // description: "Zveme vás na elektro-ekumenu!"
+  },
+  {
     key: "velky_patek_2024",
     type: ["electro", "ecumene"],
     name: "Noc kostelů",
