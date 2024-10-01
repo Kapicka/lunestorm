@@ -1,7 +1,6 @@
 <template>
   <nav class="nav fixed-container top75"
-       v-bind:class=" { fixed, }"
-       style="{overflow: hidden}"
+       v-bind:class=" { fixed }"
   >
     <ul class="ul flex"
     >
