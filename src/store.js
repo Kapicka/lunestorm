@@ -181,11 +181,6 @@ const artists = [
         name: "Grafik",
         type: ["electro", "ecumene"],
         key: "grafik",
-        // description: `Je to fajn DJ :)`,
-        links: [
-            {name: "SoundCloud", url: "https://soundcloud.com/grafikmarek"},
-            {name: "fb", url: "https://www.facebook.com/marekgabik8"}
-        ]
     },
     {
         name: "Infract",
