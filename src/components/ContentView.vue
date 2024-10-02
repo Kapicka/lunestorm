@@ -20,15 +20,13 @@
           </div>
         </router-link>
       </div>
-    <router-view/>
+      <router-view/>
     </div>
-    <footer class="footer" >
+    <footer class="footer">
       <div class="footer-content">
-      <a href="mailto:oecumena@lunestorm.com">oecumena@lunestorm.com*</a>
+        <a href="mailto:oecumena@lunestorm.com">oecumena@lunestorm.com*</a>
       </div>
     </footer>
-
-
   </div>
 </template>
 
@@ -42,13 +40,25 @@ export default {
       type: String
     }
   },
-
   mixins: [helpers],
   beforeMount() {
     this.setTheme(this.getPage());
     this.getEmitter().on("scroll-up", () => {
       this.$refs.content.scrollTo({top: 0, behavior: "smooth"});
+    });
+  },
+  mounted() {
+    const scrollableView = this.$el.querySelector(".router-view");
+    let lastScrollTop = 0;
 
+    scrollableView.addEventListener("scroll", () => {
+      const currentScroll = scrollableView.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.body.classList.add("hide-system-navbar");
+      } else {
+        document.body.classList.remove("hide-system-navbar");
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   },
   methods: {
@@ -86,7 +96,7 @@ export default {
   align-items: center;
 }
 
-.footer-content{
+.footer-content {
   display: flex;
   justify-content: right;
   width: 80%;
@@ -99,17 +109,22 @@ export default {
   top: 40%;
   transform: rotate(-90deg);
 }
+
 .side-bar--right {
   right: 15px;
 }
+
 .side-bar--left {
   left: 15px;
 }
+
+
 
 @media (max-width: 600px) {
   .side-bar--right {
     right: 0px;
   }
+
   .footer-content {
     justify-content: center;
   }

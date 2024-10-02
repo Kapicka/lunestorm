@@ -2,8 +2,6 @@ import EventEmitter from "../EventEmmiter";
 
 const theme = {value: "electro"};
 const emitter = new EventEmitter();
-
-
 const events = [
     {
         key: "lunestorm_live",
