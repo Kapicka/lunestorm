@@ -42,7 +42,7 @@ const events = [
         type: ["ecumene"],
         name: "SAM Orlová",
         dateStart: "2024-08-09",
-        //dateEnd: "2024-06-07",
+        dateEnd: "2024-08-09",
         links: [
             {name: "web", url: "https://www.instagram.com/oecumena.electronica"}
         ],
