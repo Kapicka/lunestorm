@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav fixed-container top75"
+  <nav class="nav"
        v-bind:class=" { fixed }"
   >
     <ul class="ul flex"
@@ -53,11 +53,14 @@ export default {
 }
 
 .nav {
+  top: 75px;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 0;
   padding-top: 0;
+  overflow: hidden;
 }
 
 .top75 {

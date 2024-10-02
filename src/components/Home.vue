@@ -1,35 +1,41 @@
 <template>
-  <div class="home-content"
-  >
-    <div>
+  <div class="home">
+    <div class="home-content">
       <div>
-        <router-link class="decoration-none" to="/electro">
-          <div
-            @mouseenter="setTheme('electro')"
-            v-bind:class="{
+        <div>
+          <router-link class="decoration-none" to="/electro">
+            <div
+                @mouseenter="setTheme('electro')"
+                v-bind:class="{
             'border-right--white underline  color--ecumene': isTheme('electro'),
             'border-right--black color--electro': isTheme('ecumene')} "
-            @click="setTheme('electro')"
+                @click="setTheme('electro')"
 
-            class="h60 p20 text-align-right menu-text pointer">
-            ELECTRO
-          </div>
-        </router-link>
+                class="h60 p20 text-align-right menu-text pointer">
+              ELECTRO
+            </div>
+          </router-link>
+        </div>
       </div>
-    </div>
-    <div>
       <div>
-        <router-link class="decoration-none" to="/ecumene">
-          <div
-            @mouseenter="setTheme('ecumene')"
-            class="h60 p20  text-align-left menu-text"
-            style="{overflow: hidden}"
-          >
-            ECUMENE
-          </div>
-        </router-link>
+        <div>
+          <router-link class="decoration-none" to="/ecumene">
+            <div
+                @mouseenter="setTheme('ecumene')"
+                class="h60 p20  text-align-left menu-text"
+                style="{overflow: hidden}"
+            >
+              ECUMENE
+            </div>
+          </router-link>
+        </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <a href="mailto:oecumena@lunestorm.com">oecumena@lunestorm.com*</a>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -75,6 +81,30 @@ export default {
   text-decoration: none;
   text-underline: none;
 }
+
+.home {
+  width: 100%;
+  padding-bottom: 0;
+  padding-top: 150px;
+  height: calc(100% - 160px);
+  display: flex;
+  flex-direction: column;
+}
+.footer-content{
+  display: flex;
+  justify-content: right;
+  width: 80%;
+  padding-top: 10px;
+  border-top: 1px solid;
+}
+.footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
 
 }

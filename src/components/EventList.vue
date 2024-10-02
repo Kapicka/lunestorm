@@ -13,7 +13,7 @@
         <h2 class="text-align-center bold pb20 pt50"> Past events</h2>
         <div style="min-width: 400px" :key="event.key" v-for="(event,i) in pastEvents">
           <EventListItem :event="event" />
-          <div v-if="i !== eventItems.length-1" class="w100 text-align-center break">~</div>
+          <div v-if="i !== eventItems.length-2" class="w100 text-align-center break">~</div>
         </div>
       </div>
     </div>

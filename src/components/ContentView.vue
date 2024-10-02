@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper flex justify-content-center">
-    <div class="nevim-ted">
+  <div class="content-view">
+    <div class="router-view">
       <div class="fixed side-bar side-bar--left">
         <router-link @click.native="setTheme('electro')"
                      class="decoration-none side-bar_item link"
@@ -11,9 +11,6 @@
           </div>
         </router-link>
       </div>
-      <div ref="content" class="app-content center-content">
-        <router-view />
-      </div>
       <div class="fixed side-bar side-bar--right link ">
         <router-link @click.native="setTheme('ecumene')"
                      class="decoration-none side-bar_item link" :to="getPageUrl('ecumene')">
@@ -23,7 +20,15 @@
           </div>
         </router-link>
       </div>
+    <router-view/>
     </div>
+    <footer class="footer" >
+      <div class="footer-content">
+      <a href="mailto:oecumena@lunestorm.com">oecumena@lunestorm.com*</a>
+      </div>
+    </footer>
+
+
   </div>
 </template>
 
@@ -42,7 +47,7 @@ export default {
   beforeMount() {
     this.setTheme(this.getPage());
     this.getEmitter().on("scroll-up", () => {
-      this.$refs.content.scrollTo({ top: 0, behavior: "smooth" });
+      this.$refs.content.scrollTo({top: 0, behavior: "smooth"});
 
     });
   },
@@ -54,13 +59,39 @@ export default {
   }
 };
 </script>
-
 <style scoped>
-.wrapper {
+
+.content-view {
+  width: 100%;
+  padding-bottom: 0;
+  padding-top: 150px;
+  height: calc(100% - 140px);
+  display: flex;
+  flex-direction: column;
+}
+
+.router-view {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: calc(100% - 40px);
+  flex-grow: 1;
   width: 100%;
 }
 
-.nevim-ted {
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: right;
+  width: 80%;
+  padding-top: 10px;
+  border-top: 1px solid;
 }
 
 .side-bar {
@@ -68,43 +99,24 @@ export default {
   top: 40%;
   transform: rotate(-90deg);
 }
-
 .side-bar--right {
   right: 15px;
 }
-
 .side-bar--left {
   left: 15px;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.app-content {
-  position: fixed;
-  top: 150px;
-  left: 15px;
-  right: 15px;
-  width: 100%;
-  height: calc(100vh - 150px);
-  overflow-y: scroll;
 }
 
 @media (max-width: 600px) {
   .side-bar--right {
     right: 0px;
   }
+  .footer-content {
+    justify-content: center;
+  }
 
   .side-bar--left {
     left: 0px;
   }
-
-  .nevim-ted {
-    width: calc(100% - 140px);
-  }
-
-
 }
-
 </style>
+

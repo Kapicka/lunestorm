@@ -1,17 +1,13 @@
 <template>
   <div id="app"
-       class="app"
        v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
   >
-    <div class="fixed-container ">
-      <!--      <router-link :to="{`/${getTheme()}/events`}">-->
-      <h1 class="h1 no-wrap pointer"
-          @click="handleH1Clicked()"
-      >
-        LUNESTORM </h1>
-      <!--        </router-link>-->
+    <div class="fixed-container "><h1 class="h1 no-wrap pointer"
+                                      @click="handleH1Clicked()"
+    >
+      LUNESTORM </h1>
     </div>
-    <router-view   />
+    <router-view/>
   </div>
 </template>
 <script>
@@ -26,8 +22,7 @@ export default {
   mixins: [helpers],
   methods: {
     handleH1Clicked() {
-      this.$router.push(`/${this.getTheme()}`);
-      this.getEmitter().emit('scroll-up')
+        this.$router.push("/");
     }
   }
 };
@@ -41,17 +36,14 @@ a {
   color: inherit;
 }
 
-.app {
-  transition: 500ms;
-}
-
 #app {
-  maring: 0;
   padding: 0;
+  margin: 0;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 1s background-color;
+  height: 100dvh;
 }
 
 a {
@@ -65,18 +57,7 @@ body {
 }
 
 .no-wrap {
-  text-wrap: none;
   white-space: nowrap;
-}
-
-.app-content {
-  position: fixed;
-  top: 150px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: calc(100vh - 150px);
-  overflow-y: scroll;
 }
 
 .h1 {
@@ -85,7 +66,6 @@ body {
   width: auto;
   font-size: 62px;
   text-align: center;
-  text-wrap: none;
   transition: 1000ms color linear;
   letter-spacing: 20px;
 }
