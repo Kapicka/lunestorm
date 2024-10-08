@@ -14,8 +14,12 @@ const events = [
         key: "oecumena_2024",
         type: ["ecumene", "electro"],
         name: "Oecumena Electronica",
-        dateStart: "2024-11-22",
-        dateEnd: "2024-11-22",
+        dateStart: "2024-11-22T19:00",
+        dateEnd: "2024-11-22T22:00",
+        links: [
+            {name: "fb", url: "https://www.facebook.com/events/518940397589915"},
+            {name: "ig", url: "https://www.instagram.com/oecumena_electronica"}
+        ]
     },
     {
         key: "otevreno_2024",
