@@ -18,7 +18,7 @@ const events = [
         dateEnd: "2024-11-22T22:00",
         links: [
             {name: "fb", url: "https://www.facebook.com/events/518940397589915"},
-            {name: "ig", url: "https://www.instagram.com/oecumena_electronica"}
+            {name: "ig", url: "https://www.instagram.com/oecumena.electronica"}
         ]
     },
     {
@@ -128,7 +128,7 @@ const events = [
         dateEnd: "2023-11-04T21:00",
         links: [
             {name: "fb", url: "https://www.facebook.com/events/1724506074638585/"},
-            {name: "ig", url: "https://www.instagram.com/oecumena_electronica"}
+            {name: "ig", url: "https://www.instagram.com/oecumena.electronica"}
         ],
         place: {
             name: "Kostel Českobratrské církve evangelické na Vinohradech",
