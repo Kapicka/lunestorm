@@ -1,7 +1,7 @@
 <template>
   <div class="w100 center-content">
     <Nav class="nav" currentPage="events"></Nav>
-    <div class=" w100 mt10 fade-in">
+    <div class=" w100 mt10">
       <div class="flex flex-direction-column align-items-center justify-content-center w100 fade-in" v-if="upcomingEvents.length">
         <h2 class=" bold pb20 h2"> Upcoming events</h2>
         <div style="min-width: 400px" :key="event.key" v-for="(event,i) in upcomingEvents">

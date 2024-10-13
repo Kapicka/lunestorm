@@ -1,6 +1,6 @@
 <template>
-  <nav class="nav"
-       v-bind:class=" { fixed }"
+  <nav class="fixed nav"
+       v-bind:class="{ 'bg--electro':isTheme('electro'), 'bg--ecumene':isTheme('ecumene')}"
   >
     <ul class="ul flex"
     >
@@ -22,7 +22,7 @@
 
 <script>
 import helpers from "@/mixins/helpers";
-import { artists, events, theme, venues } from "../store";
+import {artists, events, theme, venues} from "../store";
 
 export default {
   name: "Nav",
@@ -54,7 +54,6 @@ export default {
 
 .nav {
   top: 75px;
-  position: fixed;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -63,9 +62,6 @@ export default {
   overflow: hidden;
 }
 
-.top75 {
-  top: 75px;
-}
 
 
 .mr10 {

@@ -1,7 +1,7 @@
 <template>
   <div class="w100 center-content">
       <Nav currentPage="people"></Nav>
-    <div class=" w100 mt10 fade-in">
+    <div class=" w100 mt10">
       <div class="justify-content-center w100">
         <div
           class="list-item"

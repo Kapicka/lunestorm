@@ -2,10 +2,9 @@
   <div id="app"
        v-bind:class="{ 'color--electro':isTheme('ecumene'), 'color--ecumene':isTheme('electro')}"
   >
-    <div class="fixed-container "><h1 class="h1 no-wrap pointer"
-                                      @click="handleH1Clicked()"
-    >
-      LUNESTORM </h1>
+    <div class="fixed-container"
+         v-bind:class="{'bg--electro':isTheme('electro'), 'bg--ecumene':isTheme('ecumene')}"
+    > <h1 class="h1 no-wrap pointer" @click="handleH1Clicked()" > LUNESTORM </h1>
     </div>
     <router-view/>
   </div>
@@ -13,16 +12,20 @@
 <script>
 
 import helpers from "@/mixins/helpers.js";
+import Nav from "@/components/Nav.vue";
 
 export default {
   name: "App",
+  components: {Nav},
   mounted() {
     this.setTheme(this.getPage());
   },
   mixins: [helpers],
   methods: {
     handleH1Clicked() {
+      if (this.$route.path !== "/") {
         this.$router.push("/");
+      }
     }
   }
 };
@@ -42,19 +45,22 @@ a {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: 1s background-color;
-  height: 100dvh;
 }
 
 a {
   text-decoration: none;
 }
+.bg-transition {
+  transition: 1s background-color;
+}
 
 body {
   margin: 0;
   pading: 0;
-  transition: 1s background-color;
 }
+
+
+
 
 .no-wrap {
   white-space: nowrap;
@@ -78,6 +84,4 @@ body {
     letter-spacing: initial;
   }
 }
-
-
 </style>

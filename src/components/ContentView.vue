@@ -22,7 +22,9 @@
       </div>
       <router-view/>
     </div>
-    <footer class="footer">
+    <footer class="footer"
+            v-bind:class="{'bg--electro':isTheme('electro'), 'bg--ecumene':isTheme('ecumene')}"
+    >
       <div class="footer-content">
         <a href="mailto:oecumena@lunestorm.com">oecumena@lunestorm.com*</a>
       </div>
@@ -73,25 +75,23 @@ export default {
 
 .content-view {
   width: 100%;
-  padding-bottom: 0;
   padding-top: 150px;
-  height: calc(100% - 140px);
+  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
 }
 
 .router-view {
-  overflow-y: scroll;
   overflow-x: hidden;
-  max-height: calc(100% - 40px);
-  flex-grow: 1;
   width: 100%;
 }
-
 .footer {
+  position: fixed;
+  width: 100%;
+  top: calc(100dvh - 70px);
+  display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
