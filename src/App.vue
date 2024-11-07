@@ -30,7 +30,6 @@ export default {
   }
 };
 </script>
-
 <style>
 @import "./assets/styles/theme.css";
 
