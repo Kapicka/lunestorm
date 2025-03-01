@@ -61,7 +61,7 @@ const events = [
     },
     {
         key: "velky_patek_2024",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         name: "Noc kostelů",
         dateStart: "2024-06-07",
         dateEnd: "2024-06-07",
@@ -96,7 +96,7 @@ const events = [
     },
     {
         key: "electroecumene_3_2024",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         name: "Oecumena Electronica",
         dateStart: "2024-03-29T19:00",
         dateEnd: "2024-03-29T21:00",
@@ -126,7 +126,7 @@ const events = [
     },
     {
         key: "electroecumene_11_2023",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         name: "Oecumena Electronica",
         dateStart: "2023-11-04T19:00",
         dateEnd: "2023-11-04T21:00",
@@ -185,30 +185,30 @@ const events = [
 const artists = [
     {
         name: "Grafik",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         key: "grafik",
     },
     {
         name: "Infract",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         key: "infract",
         links: []
     },
     {
         name: "Beña",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         key: "bena",
         links: []
     },
     {
         name: "DJ Soda",
-        type: ["electro", "ecumene"],
+        type: "ELECTRO_ECUMENE",
         key: "soda",
         links: []
     },
     {
         name: "Efectiv",
-        type: ["electro"],
+        type: "ELECTRO",
         key: "efectiv",
         links: []
     }

@@ -20,7 +20,7 @@
           </div>
         </router-link>
       </div>
-      <router-view/>
+      <router-view :people="people" :events="events"/>
     </div>
     <footer class="footer"
             v-bind:class="{'bg--electro':isTheme('electro'), 'bg--ecumene':isTheme('ecumene')}"
@@ -34,6 +34,7 @@
 
 <script>
 import helpers from "@/mixins/helpers";
+import {createClient} from '@supabase/supabase-js';
 
 export default {
   name: "ContentView",
@@ -50,6 +51,7 @@ export default {
     });
   },
   mounted() {
+    this.fetchData()
     const scrollableView = this.$el.querySelector(".router-view");
     let lastScrollTop = 0;
 
@@ -63,7 +65,34 @@ export default {
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
   },
+  data() {
+    return {
+      people: [],
+      events: [],
+    };
+  },
   methods: {
+    async fetchData() {
+      const superbase = createClient(process.env.VUE_APP_SUPERBASE_URL, process.env.VUE_APP_SUPERBASE_ANON_KEY)
+      const {data: eventsData, error: eventsError, count: eventsCount} = await superbase
+          .from("events")
+          .select('*', {count: 'exact'})
+          .order("start_date", {ascending: false})
+      const {data: peopleData, error: peopleError, count: peopleCount} = await superbase
+          .from("people")
+          .select('*', {count: 'exact'})
+      const {data: eventPeople, error: eventPeopleError, count: eventPeopleCount} = await superbase
+          .from("event_people")
+          .select('*', {count: 'exact'})
+
+      this.events = eventsData.map(event => {
+        const people = eventPeople.filter(ep => ep.event_id === event.id).map(ep => peopleData.find(p => p.id === ep.person_id));
+        return {...event, people};
+      });
+
+      this.people = peopleData;
+
+    },
     getPageUrl(page) {
       const toBeReplaced = page === "electro" ? "ecumene" : "electro";
       return this.$route.path.replace(toBeReplaced, page);
@@ -85,6 +114,7 @@ export default {
   overflow-x: hidden;
   width: 100%;
 }
+
 .footer {
   position: fixed;
   width: 100%;
@@ -117,7 +147,6 @@ export default {
 .side-bar--left {
   left: 15px;
 }
-
 
 
 @media (max-width: 600px) {

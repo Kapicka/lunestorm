@@ -6,8 +6,6 @@ import PlaceList from "@/components/PlaceList";
 import ArtistList from "@/components/ArtistList";
 import Contact from "@/components/Contact";
 
-const filterList = (list, type) => list.filter(li => li.type.includes(type));
-
 const routes = [
   {
     name: "home",
@@ -24,25 +22,21 @@ const routes = [
         name: "events",
         path: "events",
         component: EventList,
-        props: { events: filterList(events, "ecumene") }
       },
       {
         name: "people",
         path: "people",
         component: ArtistList,
-        props: { artists: filterList(artists, "ecumene") }
       },
       {
         name: "venues",
         path: "venues",
         component: PlaceList,
-        props: { places: filterList(events, "ecumene") }
       },
       {
         name: "contact",
         path: "contact",
         component: Contact,
-        props: { places: filterList(events, "ecumene") }
       }
     ]
   },
@@ -57,25 +51,21 @@ const routes = [
         name: "events",
         path: "events",
         component: EventList,
-        props: { events: filterList(events, "electro") }
       },
       {
         name: "people",
         path: "people",
         component: ArtistList,
-        props: { artists: filterList(artists, "electro") }
       },
       {
         name: "venues",
         path: "venues",
         component: PlaceList,
-        props: { places: filterList(events, "electro") }
       },
       {
         name: "contact",
         path: "contact",
         component: Contact,
-        props: { places: filterList(events, "electro") }
       }
     ]
   }
