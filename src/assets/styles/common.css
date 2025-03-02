@@ -52,6 +52,9 @@ h2 {
 .w100 {
     width: 100%
 }
+.h-100 {
+    height: 100px
+}
 
 .underline {
     text-decoration: underline;
@@ -135,6 +138,9 @@ h2 {
 .link--underline {
     padding-bottom: 2px;
     border-bottom: 1px solid;
+}
+.pt150 {
+    padding-top: 150px;
 }
 
 .pt50 {

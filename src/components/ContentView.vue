@@ -21,6 +21,10 @@
         </router-link>
       </div>
       <router-view :people="people" :events="events"/>
+
+      <div v-if="loading" class="pt150 w100 h-100 flex justify-content-center">
+      <Loader/>
+      </div>
     </div>
     <footer class="footer"
             v-bind:class="{'bg--electro':isTheme('electro'), 'bg--ecumene':isTheme('ecumene')}"
@@ -35,9 +39,11 @@
 <script>
 import helpers from "@/mixins/helpers";
 import {createClient} from '@supabase/supabase-js';
+import Loader from "@/components/Loader.vue";
 
 export default {
   name: "ContentView",
+  components: {Loader},
   props: {
     pageName: {
       type: String
@@ -51,7 +57,10 @@ export default {
     });
   },
   mounted() {
-    this.fetchData()
+    this.fetchData().then(() => {
+      this.loading = false
+    })
+
     const scrollableView = this.$el.querySelector(".router-view");
     let lastScrollTop = 0;
 
@@ -69,6 +78,7 @@ export default {
     return {
       people: [],
       events: [],
+      loading: true
     };
   },
   methods: {
