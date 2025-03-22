@@ -54,7 +54,9 @@ export default {
   components: {HidebleDescription},
   filters: {
     formatDate(event) {
-      return event.show_time ?  moment(event.start_date).format("DD.MM.YYYY HH:mm"): moment(event).format("DD.MM.YYYY");
+      return event.show_time
+          ? moment(event.start_date).format("DD.MM.YYYY HH:mm")
+          : moment(event.start_date).format("DD.MM.YYYY");
     }
   },
   name: "EventListItem",
