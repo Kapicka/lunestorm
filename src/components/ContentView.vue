@@ -83,7 +83,10 @@ export default {
   },
   methods: {
     async fetchData() {
-      const superbase = createClient(process.env.VUE_APP_SUPERBASE_URL, process.env.VUE_APP_SUPERBASE_ANON_KEY)
+      const superbase = createClient(
+          process.env.VUE_APP_SUPERBASE_URL,
+          process.env.VUE_APP_SUPERBASE_ANON_KEY
+      )
       const {data: eventsData, error: eventsError, count: eventsCount} = await superbase
           .from("events")
           .select('*', {count: 'exact'})
