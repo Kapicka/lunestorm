@@ -84,8 +84,8 @@ export default {
   methods: {
     async fetchData() {
       const superbase = createClient(
-          process.env.VUE_APP_SUPERBASE_URL,
-          process.env.VUE_APP_SUPERBASE_ANON_KEY
+          "https://bguuhmnzzusdmfyqyupq.supabase.co",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJndXVobW56enVzZG1meXF5dXBxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA3NzM5NTgsImV4cCI6MjA1NjM0OTk1OH0.gRZh-5NPLICIWC3mEYjBfjlHnpjMc0HoASJhcjyxW0M"
       )
       const {data: eventsData, error: eventsError, count: eventsCount} = await superbase
           .from("events")

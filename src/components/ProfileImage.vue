@@ -7,8 +7,12 @@
     }"
   >
     <img
+        ref="img"
         class="profile-img"
-        :class="{ loaded: !isLoading }"
+        :class="{
+      loaded: !isLoading,
+         flipedImage: this.flipedImage
+    }"
         loading="lazy"
         :src="src"
         alt="profile"
@@ -23,6 +27,10 @@ import helpers from "@/mixins/helpers";
 export default {
   name: "ProfileImage",
   props: {
+    flip: {
+      type: Boolean,
+      required: false
+    },
     src: {
       type: String,
       required: true
@@ -30,10 +38,20 @@ export default {
   },
   data() {
     return {
-      isLoading: true
+      isLoading: true,
+      flipedImage: false
     };
+
   },
   mixins: [helpers],
+  mounted() {
+    if (this.flip) {
+      this.$refs.img.addEventListener("click", () => {
+        this.flipedImage = !this.flipedImage;
+      })
+    }
+
+  },
   methods: {
     onLoad() {
       // This method is triggered when the image fully loads.
@@ -99,6 +117,10 @@ export default {
 
 .loading--electro {
   animation: borderFade--electro 5s infinite;
+}
+
+.flipedImage {
+  transform: rotate(180deg);
 }
 
 .loading--ecumene {
