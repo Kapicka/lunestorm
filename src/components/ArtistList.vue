@@ -153,7 +153,8 @@ export default {
 
 .separator {
   width: 100%;
-  text-align: left;
+  font-size: 28px;
+  text-align: center;
   margin: 10px 0;
 }
 </style>

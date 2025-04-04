@@ -38,9 +38,9 @@ export default {
     containerStyle() {
       return {
         height: this.containerHeight,
-        transition: "height 0.8s ease",
+        transition: "height 0.5s ease",
         // Hide overflow only when the content exceeds maxHeight and is collapsed.
-        overflow: (!this.expanded && this.naturalHeight > this.maxHeight) ? "hidden" : "visible"
+        overflow: "hidden"// (!this.expanded && this.naturalHeight > this.maxHeight) ? "hidden" : "visible"
       };
     }
   },
@@ -55,7 +55,7 @@ export default {
   methods: {
     toggle() {
       const el = this.$refs.contentContainer;
-      el.style.transition = "height 0.8s ease";
+      el.style.transition = "height 0.5s ease";
       if (!this.expanded) {
         this.containerHeight = this.naturalHeight + "px";
       } else {
